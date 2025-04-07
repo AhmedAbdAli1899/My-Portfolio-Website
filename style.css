@@ -387,6 +387,7 @@ section{
 /* styles for the img of the project card */
 .project-image img{
     width: 100%;
+    border-bottom: black 1px solid;
 }
 
 /* styles for the info of the project card */
