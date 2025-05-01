@@ -242,7 +242,7 @@ section{
 #services, #skills,#projects .content,.title, #contact{
     animation: appear ease;
     animation-timeline: view(); /* start animation when element becomes visible */
-    animation-range: entry 0% cover 40%; /* animation runs from 0% to 40% of element in view */
+    animation-range: entry 0% cover 20%; /* animation runs from 0% to 40% of element in view */
 }
 
 @keyframes appear {
@@ -350,15 +350,34 @@ section{
     background-color: #000016;
 }
 
-/* margin top fot the content of the projrcts */
+/* margin top for the content of the projrcts */
 .projects .content{
     margin-top: 30px;
+}
+
+/* styles for the recommended project btn */
+.recommended-btn{
+    background-color: var(--main-color);
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-size: 1.3em;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+.recommended-btn:hover{
+    transform: scale(1.03);
 }
 
 /* styles for the projects cards */
 .project-card{
     background-color: #fff;
     border: 1px solid #fff;
+    position: relative;
     min-height: 14em;
     width: 22em;
     overflow: hidden;
@@ -370,10 +389,6 @@ section{
 .project-card:hover{
     transform: scale(1.03);
 }
-.project-card:hover .project-image{
-    opacity: 0.9;
-}
-
 
 /* styles for the img of the project card */
 .project-image img{
@@ -409,6 +424,18 @@ section{
 .more-details:hover{
     color: #1146d7;
 }
+
+/* styles for the recommended sign */
+.project-card .recommended{
+    position: absolute; top: 0; right: 30px;
+    background-color: #3a6cf4c7;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 5px 13px;
+    border-radius: 0 0 5px 15px;
+    writing-mode: vertical-rl;
+}
+
 /* ============================== */
 
 /* styles for the contact section (it's almost copy from services section)*/
