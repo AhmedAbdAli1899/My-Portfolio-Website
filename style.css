@@ -500,19 +500,6 @@ img{
 }
 
 @media (max-width: 900px){
-    header{
-        padding: 10px 70px;
-    }
-
-    header .navigation a{
-        padding-left: 9px;
-        font-size: 0.8em;
-    }
-
-    header .logo{
-        font-size: 1.1em;
-    }
-
     /* styles for the all section */
     section{
         padding: 80px 20px;
@@ -537,7 +524,23 @@ img{
     }
 }
 
-@media (max-width: 707px){
+@media (max-width: 767px){
+    header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    header .navigation{
+        display: flex;
+        margin-top: 10px;
+        font-size: 0.9em;
+    }
+    header .navigation a{
+        padding: 0;
+    }
+    header .navigation a:not(:last-child){
+        margin-right: 30px;
+    }
     .main, #services, #projects, #contact, footer{
         font-size: 12px;
     }
@@ -551,9 +554,6 @@ img{
 }
 
 @media (max-width: 400px){
-    header{
-        font-size: 13px;
-    }
     .main{
         font-size: 11px;
     }
