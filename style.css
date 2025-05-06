@@ -321,16 +321,10 @@ section{
 
 /* styles for the cards of the skills section */
 #skills .card{
-    transform: scale(1.1);
     width: 10em;
-    padding-top: 0;
-    max-height: 110px;
-    overflow: hidden;
+    padding: 15px;
     transition: 1s;
     background-color: #fff;
-}
-#skills .card:hover{
-    max-height: 13.7em;
 }
 
 /* styles for the icon of the skills*/
