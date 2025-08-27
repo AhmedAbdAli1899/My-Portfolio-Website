@@ -133,6 +133,7 @@ header .navigation a{
     color: var(--main-color);
     text-decoration: none;
     padding-left: 30px;
+    white-space: nowrap;
     font-size: 1em;
     font-weight: 500;
     animation: header-nav 2.7s ease 0.2s 1 backwards;
@@ -591,7 +592,7 @@ img{
         padding: 0;
     }
     header .navigation a:not(:last-child){
-        margin-right: 30px;
+        margin-right: 20px;
     }
     .main, #services, #projects, #contact, footer{
         font-size: 12px;
