@@ -334,6 +334,12 @@ section{
     text-align: center;
 }
 
+@media (max-width: 900px){
+    #about-me .text{
+        padding: 0 85px;
+    }
+}
+
 /* ============================== */
 
 /* styles for the skills section */
