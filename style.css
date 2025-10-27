@@ -619,3 +619,14 @@ img{
         font-size: 10px;
     }
 }
+
+
+@media (min-width: 768px) and (max-width: 880px){
+    header .logo{
+        font-size: 0.9em;
+    }
+    header .navigation a{
+        padding-left: 15px;
+        font-size: 0.9em;
+    }
+}
