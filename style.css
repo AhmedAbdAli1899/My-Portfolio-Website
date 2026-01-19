@@ -239,8 +239,8 @@ section{
 }
 /* ============================== */
 
-/* smooth appearance animation for all Elements except: header , main , footer*/
-#services, #skills,#projects .content,.title, #contact{
+/* smooth appearance animation*/
+.smooth-appearance{
     animation: appear ease;
     animation-timeline: view(); /* start animation when element becomes visible */
     animation-range: entry 0% cover 20%; /* animation runs from 0% to 40% of element in view */
