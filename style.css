@@ -6,7 +6,7 @@
 :root{
     --main-color: #3a6cf4;
     --main-bg: url(tools/main_bg.JPEG);
-    --mid-bg: url(tools/mid_bg.jpg);
+    --mid-bg: url(tools/mid_bg.JPEG);
     --phone-bg: url(tools/phone_bg.JPEG);
 }
 
