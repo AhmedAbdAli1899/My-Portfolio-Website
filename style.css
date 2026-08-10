@@ -421,12 +421,12 @@ section{
 }
 
 /* styles for the link of the project card */
-.more-details{
+.project-card .visit{
     color: var(--main-color);
     text-decoration: none;
     text-transform: capitalize;
 }
-.more-details:hover{
+.project-card .visit:hover{
     color: #1146d7;
 }
 
