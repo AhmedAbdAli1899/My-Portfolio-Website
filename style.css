@@ -127,6 +127,23 @@ header .logo {
     font-size: 1.4em;
     animation: header-logo 2.4s ease 0.2s 1 backwards;
 }
+
+/* Hamburger button - مخفي بشكل افتراضي على الشاشات الكبيرة */
+.hamburger{
+    display: none;
+    font-size: 1.5em;
+    color: var(--main-color);
+    cursor: pointer;
+    z-index: 1000;
+    animation: header-nav 2.4s ease 0.2s 1 backwards;
+}
+
+/* زر إغلاق القائمة - مخفي على الشاشات الكبيرة */
+.close-menu{
+    display: none;
+    animation: header-nav 2.4s ease 0.2s 1 backwards;
+}
+
 /* styles for the navigation bar of the header (links) (project...) */
 header .navigation a{
     display: inline-flex;
@@ -556,26 +573,57 @@ img{
     }
 }
 
-@media (max-width: 767px){
-    header{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+@media (max-width: 1100px){
+    .hamburger{
+        display: block;
+        z-index: 900;
     }
-    header .logo{
-        font-size: 1em;
-    }
+
+    /* تحويل القائمة إلى panel ثابت بطول الشاشة */
     header .navigation{
+        position: fixed;
+        top: 0;
+        right: -100%;              /* مخفية خارج الشاشة من اليمين */
+        width: 70%;
+        max-width: 300px;
+        height: 100dvh;             /* بطول الصفحة كاملة */
+        background-color: #f0f0f0;
+        border-radius: 50px 0 0 50px;
         display: flex;
-        margin-top: 10px;
-        font-size: 0.8em;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 50px 30px;
+        margin: 0;
+        transition: right 0.7s;  /* الحركة عند الفتح/الإغلاق */
+        z-index: 999;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.15);
     }
+
+    /* الحالة المفعّلة - القائمة مفتوحة */
+    header .navigation.active{
+        right: 0;
+    }
+
     header .navigation a{
-        padding: 0;
+        padding: 15px 0;
+        font-size: 1.1em;
+        width: 100%;
     }
-    header .navigation a:not(:last-child){
-        margin-right: 20px;
+
+    /* زر إغلاق داخل القائمة */
+    .close-menu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 1.3em;
+        color: var(--main-color);
+        cursor: pointer;
     }
+}
+
+@media (max-width: 767px){ 
     .main, #services, #projects, #contact, footer{
         font-size: 12px;
     }
@@ -603,12 +651,3 @@ img{
 }
 
 
-@media (min-width: 768px) and (max-width: 880px){
-    header .logo{
-        font-size: 0.9em;
-    }
-    header .navigation a{
-        padding-left: 15px;
-        font-size: 0.9em;
-    }
-}
