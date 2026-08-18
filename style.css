@@ -486,10 +486,12 @@ section {
 /* styles for the footer (copyrights and social icons) */
 footer {
 	background-color: #000016;
+	height: fit-content;
 	color: #fff;
-	padding: 1.7em;
+	padding: 17px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 /* styles for the copyrights of the footer */
@@ -504,7 +506,7 @@ footer {
 
 /* styles for the social icons of the footer (it's almost cope from the main section)*/
 footer .social-icons a {
-	font-size: 1.2em;
+	font-size: 1em;
 	padding: 0 12 0 0;
 }
 
