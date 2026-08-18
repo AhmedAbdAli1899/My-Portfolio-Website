@@ -544,6 +544,13 @@ img {
 }
 
 @media (max-width: 569px) {
+	header {
+		padding: 16px 25px;
+	}
+
+	header .logo {
+		font-size: 1.2em;
+	}
 	.main {
 		background: var(--phone-bg) center/cover;
 	}
