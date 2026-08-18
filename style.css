@@ -226,16 +226,24 @@ section {
 	transform: scale(1.1);
 }
 
-/* styles for the social-icons of the main section */
+/* styles for the social-icons  */
+main .social-icons {
+	animation: main-social-icons 2.7s ease 2.6s 1 backwards;
+}
+
+.social-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
 .social-icons a {
 	color: #fff;
 	text-decoration: none;
-	margin-right: 24px;
-	margin-left: 3px;
 	font-size: 1.3em;
 	display: inline-block;
 	transition: 0.7s ease;
-	animation: main-social-icons 2.7s ease 2.7s 1 backwards;
 }
 .social-icons a:hover {
 	transform: scale(1.15);
@@ -486,9 +494,9 @@ section {
 /* styles for the footer (copyrights and social icons) */
 footer {
 	background-color: #000016;
-	height: fit-content;
+	min-height: 50px;
 	color: #fff;
-	padding: 17px;
+	padding: 17px 130px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -507,7 +515,6 @@ footer {
 /* styles for the social icons of the footer (it's almost cope from the main section)*/
 footer .social-icons a {
 	font-size: 1em;
-	padding: 0 12 0 0;
 }
 
 /* make the web responsive */
@@ -534,7 +541,7 @@ img {
 		text-align: center;
 		animation: main-bg-from-bottom 2.2s ease 0.2s 1 forwards;
 	}
-	.social-icons {
+	.main.social-icons {
 		margin-bottom: 170px;
 		margin-left: 23px;
 	}
@@ -545,9 +552,9 @@ img {
 	}
 }
 
-@media (max-width: 569px) {
+@media (max-width: 767px) {
 	header {
-		padding: 16px 25px;
+		padding: 10px 25px;
 	}
 
 	header .logo {
@@ -555,6 +562,26 @@ img {
 	}
 	.main {
 		background: var(--phone-bg) center/cover;
+	}
+	.main,
+	#services,
+	#projects,
+	#contact,
+	footer {
+		font-size: 12px;
+	}
+	.main-content {
+		text-align: center;
+	}
+	.main-content h2 {
+		font-size: 1.5em;
+	}
+
+	footer {
+		flex-direction: column;
+		padding: 17px 25px;
+		justify-content: center;
+		gap: 10px;
 	}
 }
 
@@ -633,21 +660,6 @@ img {
 	}
 }
 
-@media (max-width: 767px) {
-	.main,
-	#services,
-	#projects,
-	#contact,
-	footer {
-		font-size: 12px;
-	}
-	.main-content {
-		text-align: center;
-	}
-	.main-content h2 {
-		font-size: 1.5em;
-	}
-}
 
 @media (max-width: 400px) {
 	.main {
